@@ -1,0 +1,17 @@
+<canvas
+  id="webgl"
+  type="webgl"
+  canvas-id="canvas_test"
+  style="width: {{width}}rpx; height: {{height}}rpx;"
+>
+</canvas>
+<cover-image class="test" src="http://www.beats.net.cn/images/about/5.png" wx:if="{{show}}"></cover-image>
+<view class="log">{{word}}{{word2}}</view>
+<cover-image src="{{base64}}" class="img" ></cover-image>
+<camera
+  device-position="back"
+  flash="off"
+  binderror="error"
+  style="width: 19px; height: 14px; position: absolute;bottom:-20px;"
+  frame-size="small"
+></camera>
