@@ -1,17 +1,16 @@
-<canvas
-  id="webgl"
-  type="webgl"
-  canvas-id="canvas_test"
-  style="width: {{width}}rpx; height: {{height}}rpx;"
->
-</canvas>
-<cover-image class="test" src="http://www.beats.net.cn/images/about/5.png" wx:if="{{show}}"></cover-image>
-<view class="log">{{word}}{{word2}}</view>
-<cover-image src="{{base64}}" class="img" ></cover-image>
+<cover-view class="tipsBox" style="height:{{height}}rpx" wx:if="{{!show}}">
+  <cover-image src="/images/ar.png" class="bg"></cover-image>
+  <cover-image src="/images/circle.png" class="ar lighting"></cover-image>
+  <cover-image src="/images/s.png" class="sao rotating"></cover-image>
+</cover-view>
+<cover-view class="animeBox" wx:else>
+  <cover-image src="/images/logo.png" class="logo updowning"></cover-image>
+  <cover-view class="again" catchtap="againTry">再试一次</cover-view>
+</cover-view>
 <camera
   device-position="back"
   flash="off"
+  frame-size="large"
   binderror="error"
-  style="width: 19px; height: 14px; position: absolute;bottom:-20px;"
-  frame-size="small"
+  style="width: 750rpx; height: 1500rpx; position: absolute;top:0;left:0;"
 ></camera>
