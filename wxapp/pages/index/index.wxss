@@ -42,6 +42,13 @@
   width: 500rpx;
   height: 500rpx;
 }
+.gif{
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  width: 480rpx;
+  height: 600rpx;
+}
 .again{
   position: absolute;
   bottom: 0;

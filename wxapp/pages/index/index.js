@@ -1,6 +1,7 @@
 let discernFlag = true;
 let GyroscopeFlag = true;
 let successFlag = false;
+let gifFlag = false;
 let timer = null;
 let GyrData = null;
 
@@ -11,7 +12,8 @@ Page({
     show: false,
     word: "",
     word2: "",
-    base64: ""
+    base64: "",
+    gifId:1
   },
   onReady: function () {
     var info = wx.getSystemInfoSync();
@@ -20,6 +22,17 @@ Page({
       height:h
     });
     this.startGyr();
+  },
+
+  gifAnime(){
+    if (gifFlag){
+      var id = this.data.gifId;
+      id = id < 8 ? id + 1 : 1;
+      this.setData({ gifId:id});
+      setTimeout(()=>{
+        this.gifAnime();
+      },66)
+    }
   },
   
   /**
@@ -62,6 +75,7 @@ Page({
     this.setData({
       show: false
     });
+    gifFlag = false;
     successFlag = false;
   },
 
@@ -96,6 +110,8 @@ Page({
         this.setData({
           show: true
         });
+        gifFlag = true;
+        this.gifAnime();
         return;
       }
     }

@@ -4,7 +4,8 @@
   <cover-image src="/images/s.png" class="sao rotating"></cover-image>
 </cover-view>
 <cover-view class="animeBox" wx:else>
-  <cover-image src="/images/logo.png" class="logo updowning"></cover-image>
+  <!-- <cover-image src="/images/logo.png" class="logo updowning"></cover-image> -->
+  <cover-image src="/images/gif/{{gifId}}.png" class="gif"></cover-image>
   <cover-view class="again" catchtap="againTry">再试一次</cover-view>
 </cover-view>
 <camera
